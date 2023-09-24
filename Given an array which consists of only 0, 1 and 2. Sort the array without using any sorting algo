@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java .util.*;
+public class Main
+{  
+    static void newArray(int arr[],int size)
+    {
+        int i,j,k=0;
+        int newarr[]=new int[size];
+	    for(i=0;i<3;i++)
+	    {
+	        for(j=0;j<size;j++)
+	        {
+	            if(arr[j]==i)
+	            {
+	                newarr[k]=arr[j];
+	                k=k+1;
+	            }
+	            
+	        }
+	    }
+	    for(int l:newarr)
+	    {
+	        System.out.print(l);
+	    }
+    }
+    
+    public static void main(String[] args) 
+	{
+	    int arr[]={1,0,2,1,0,1,2};
+	    newArray(arr,arr.length);
+	    
+	}
+}
