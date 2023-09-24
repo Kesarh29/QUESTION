@@ -1,0 +1,90 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java .util.*;
+public class Main
+{  
+    static void union(int arr[],int arr1[])
+    {
+        int i=0,j=0;
+        ArrayList<Integer> newarr=new ArrayList();
+        while((i<arr.length)&&(j<arr1.length))
+        {
+            if(arr[i]==arr1[j])
+            {
+               if((newarr.size()>0)&&(newarr.get(newarr.size()-1)!=arr[i]))
+                {
+                newarr.add(arr[i]);
+                
+                }
+                else if(newarr.size()==0)
+                {
+                  newarr.add(arr[i]);
+         
+                }
+                i++;
+                j++;
+            }
+            else if(arr[i]< arr1[j])
+            {
+                if((newarr.size()>0)&&(newarr.get(newarr.size()-1)!=arr[i]))
+                {
+                    newarr.add(arr[i]);
+                    
+                }
+                else if(newarr.size()==0)
+                {
+                  newarr.add(arr[i]);
+                  
+                }
+                i++;
+            }
+            else
+            {
+                if((newarr.size()>0)&&(newarr.get(newarr.size()-1)!=arr1[j]))
+                {
+                    newarr.add(arr1[j]);
+                   
+                }
+                else if(newarr.size()==0)
+                {
+                  newarr.add(arr1[j]);
+                 
+                }
+                j++;
+            }
+        }
+        while(i<arr.length)
+        {
+            if(newarr.get(newarr.size()-1)!=arr[i])
+            {
+            newarr.add(arr[i]);
+            
+            }
+            i++;
+        }
+        while(j<arr1.length)
+        {
+            if(newarr.get(newarr.size()-1)!=arr1[j])
+            {
+            newarr.add(arr1[j]);
+            
+            }
+            j++;
+        }
+    System.out.println(newarr);
+    }
+    public static void main(String[] args) 
+	{
+	    int arr[]={1,1,4,8};
+	    int arr1[]={1,1,2,3,4};
+	    System.out.println("New array is");
+	    union(arr,arr1);
+	    
+	    
+}
+}
