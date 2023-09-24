@@ -1,0 +1,44 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java .util.*;
+public class Main
+{  
+    
+    static void negativeEnd(int arr[],int size)
+    {
+        int newArray[]=new int[size];
+        int k=0;
+        for(int i=0;i<size;i++)
+        {
+            if(arr[i]>=0)
+            {
+                newArray[k]=arr[i];            
+                k=k+1;
+            }
+        }
+        for(int i=0;i<size;i++)
+        {
+            if(arr[i]<0)
+            {
+                newArray[k]=arr[i];            
+                k=k+1;
+            }
+        }
+        for(int i=0;i<size;i++)
+        {
+            System.out.print(newArray[i]+" ");
+        }
+        
+    }
+    
+    public static void main(String[] args) 
+	{
+	    int arr[]={1, -1, 3, 2, -7, -5, 11, 6};
+	    negativeEnd(arr,arr.length);
+	}
+}
