@@ -1,0 +1,34 @@
+//new array create kiya usme phle non equal value ko store kraya or fir same array me copy kr diya..
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k=0;
+        int num1[]=new int[nums.length];
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]!=val)
+            {
+               num1[k]=nums[i];
+               k=k+1;
+            }
+        }
+        for(int i=0;i<nums.length;i++)
+        {
+            nums[i]=num1[i];     
+        }
+        System.out.println(Arrays.toString(nums));
+        return k;
+    }
+}
+OR///SAME HI ARRAY ME SATH HI SATH CHANGE KR DIYA...............
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int index = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+        return index;
+    }
+}
