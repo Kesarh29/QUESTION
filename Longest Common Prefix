@@ -1,0 +1,15 @@
+///ISME HUME ARRAY KO SIORT KRNA H OR FIRST OR LAST STRING KO COMPARE KRNA H
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        Arrays.sort(strs);
+        String s1,s2;
+        s1=strs[0];
+        s2=strs[strs.length-1];
+        int index=0;
+        while((index<s1.length())&&(s1.charAt(index)==s2.charAt(index)))
+        {
+            index=index+1;
+        }     
+        return(s1.substring(0,index));
+            }
+}
